@@ -7,7 +7,6 @@ const AppLayout: FC<PropsWithChildren> = ({ children }) => {
     return <SafeAreaView style={{ flex: 1 }}>
         <Layout style={{ flex: 1, paddingTop: StatusBar.currentHeight }}>
             {children}
-            <TabBar />
         </Layout>
     </SafeAreaView>
 }

@@ -25,10 +25,11 @@ const Row = styled(View)`
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    gap: 12px;
 `
 
 const Input = styled(InputSearchComponent)`
-    width: 85%;
+    flex-grow: 1;
 `
 
 const Button = styled(ButtonComponent)`

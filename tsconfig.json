@@ -21,13 +21,25 @@
     "jsx": "react-jsx",
     "baseUrl": "./",
     "paths": {
-      "@domain/*": ["./src/domain/*"],
-      "@presentation/*": ["./src/presentation/*"],
-      "@infra/*": ["./src/infra/*"]
+      "@infra/*": [
+        "./src/infra/*"
+      ],
+      "@domain/*": [
+        "./src/domain/*"
+      ],
+      "@services/*": [
+        "./src/services/*"
+      ],
+      "@presentation/*": [
+        "./src/presentation/*"
+      ],
     },
   },
   "exclude": [
-    "node_modules", "config-overrides"
+    "node_modules",
+    "config-overrides"
   ],
-  "include": ["./"]
+  "include": [
+    "./"
+  ]
 }

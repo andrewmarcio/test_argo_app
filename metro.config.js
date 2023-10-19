@@ -11,12 +11,14 @@ const extraNodeModules = {
     domain: path.resolve(__dirname + "/src/domain"),
     infra: path.resolve(__dirname + "/src/infra"),
     presentation: path.resolve(__dirname + "/src/presentation"),
+    services: path.resolve(__dirname + "/src/services"),
 };
 
 const watchFolders = [
     path.resolve(__dirname + "/src/domain"),
     path.resolve(__dirname + "/src/infra"),
     path.resolve(__dirname + "/src/presentation"),
+    path.resolve(__dirname + "/src/services"),
 ];
 
 const config = {

@@ -3,6 +3,9 @@
 # OSX
 #
 .DS_Store
+.env
+.env.production
+.env.development
 
 # Xcode
 #
