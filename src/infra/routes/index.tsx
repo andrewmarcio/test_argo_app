@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import React, { FC, memo } from 'react'
-import { Home } from '@presentation/views'
+import { Home } from '@presentation/Views'
 
 const RouterStack = createNativeStackNavigator()
 
