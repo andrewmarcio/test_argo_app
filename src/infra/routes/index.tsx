@@ -1,17 +1,24 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import React, { FC, memo } from 'react'
-import { Home } from '@presentation/Views'
+import { FC, memo } from 'react'
+import { Completed, Deleted, Home } from '@presentation/Views'
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
+import { TabBar } from '@presentation/Components'
 
-const RouterStack = createNativeStackNavigator()
+const RouterStack = createMaterialTopTabNavigator()
+// const RouterStack = createNativeStackNavigator()
 
 const Routes: FC = memo(() => {
     return (
         <RouterStack.Navigator
-            screenOptions={{
-                headerShown: false,
-            }}
+            tabBar={TabBar}
+            screenOptions={
+                {
+                    // headerShown: false,
+                }
+            }
         >
-            <RouterStack.Screen name="/" component={Home} />
+            <RouterStack.Screen name="Home" component={Home} />
+            <RouterStack.Screen name="Completed" component={Completed} />
+            <RouterStack.Screen name="Deleted" component={Deleted} />
         </RouterStack.Navigator>
     )
 })

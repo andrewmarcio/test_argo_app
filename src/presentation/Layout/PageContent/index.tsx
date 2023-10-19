@@ -1,15 +1,21 @@
 import { FC, memo, useCallback, useMemo } from 'react'
-import { Button, Container, Content, Header, Input, Row } from '../../home.styled'
+import { Button, Container, Content, Header, Input, Row } from './page-content.styled'
 import { Text } from '@ui-kitten/components'
 import { useSearch, useTasks } from '@presentation/Hooks'
 import { AppIcon, List } from '@presentation/Components'
+import { TStatus } from '@domain/entities/status'
 
-const PaddingContent: FC = memo(() => {
+type Props = {
+    type: TStatus
+}
+const PageContent: FC<Props> = memo(({ type }) => {
     const { tasks } = useTasks()
     const { searchValue, setSearchValue } = useSearch()
 
     const filteredTasks = useMemo(() => {
-        return tasks.filter(({ title }) => title.includes(searchValue))
+        return tasks
+            .filter(({ title }) => title.includes(searchValue))
+            .filter(({ status }) => status === type)
     }, [searchValue, tasks])
 
     const _handleClearInput = useCallback(() => {
@@ -37,4 +43,4 @@ const PaddingContent: FC = memo(() => {
     )
 })
 
-export { PaddingContent }
+export { PageContent }
