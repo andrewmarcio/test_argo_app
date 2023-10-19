@@ -1,7 +1,7 @@
 import { Layout } from "@ui-kitten/components";
 import { View } from "react-native";
 import styled from "styled-components";
-import { Input as InputComponent, Button as ButtonComponent } from '@presentation/Components'
+import { InputSearch as InputSearchComponent, Button as ButtonComponent } from '@presentation/Components'
 
 const Container = styled(Layout)`
     flex: 1;
@@ -27,7 +27,7 @@ const Row = styled(View)`
     justify-content: space-around;
 `
 
-const Input = styled(InputComponent)`
+const Input = styled(InputSearchComponent)`
     width: 85%;
 `
 

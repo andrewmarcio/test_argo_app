@@ -1,5 +1,5 @@
 import { List, ListItem as ListItemKitten } from "@ui-kitten/components";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import styled from "styled-components";
 
 const ListContainer = styled(List)`
@@ -16,8 +16,14 @@ const TextContainer = styled(View)`
     justify-content: center;
 `
 
+const ButtonGroup = styled(View)`
+    flex-direction: row;
+    gap: 8px;
+`
+
 export {
     ListContainer,
     ListItem,
-    TextContainer
+    TextContainer,
+    ButtonGroup
 }

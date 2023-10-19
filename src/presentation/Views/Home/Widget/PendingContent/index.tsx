@@ -1,11 +1,10 @@
 import { FC, memo, useCallback, useMemo } from 'react'
-import { Container, Content, Header, Row, Input, Button } from './home.styled'
-import { List } from '@presentation/Components/List'
+import { Button, Container, Content, Header, Input, Row } from '../../home.styled'
 import { Text } from '@ui-kitten/components'
-import { AppIcon } from '@presentation/Components/AppIcon'
 import { useSearch, useTasks } from '@presentation/Hooks'
+import { AppIcon, List } from '@presentation/Components'
 
-const Home: FC = memo(() => {
+const PaddingContent: FC = memo(() => {
     const { tasks } = useTasks()
     const { searchValue, setSearchValue } = useSearch()
 
@@ -38,4 +37,4 @@ const Home: FC = memo(() => {
     )
 })
 
-export { Home }
+export { PaddingContent }

@@ -1,1 +1,1 @@
-export type TStatus = "pending" | "completed" | "cancelled"
+export type TStatus = "pending" | "completed" | "deleted"
